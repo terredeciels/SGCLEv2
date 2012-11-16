@@ -1,7 +1,6 @@
 package scalacode
 
-import gposition.GCoups
-import gposition.GPosition
+import gposition.{GCoups, GPosition}
 import gposition.GCoups.TYPE_DE_COUPS._
 import scala.collection.JavaConversions._
 

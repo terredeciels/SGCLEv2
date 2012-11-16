@@ -1,8 +1,10 @@
 package gposition;
 
-import chesspresso.*;
-import java.util.*;
-import org.apache.commons.collections.iterators.*;
+import chesspresso.Chess;
+import org.apache.commons.collections.iterators.ArrayIterator;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class GPosition {
 
@@ -10,9 +12,9 @@ public class GPosition {
     private final int NB_CELLULES = 144;
     private final int PAS_DE_CASE = -1;
     private final int[] CASES = {
-        26, 27, 28, 29, 30, 31, 32, 33, 38, 39, 40, 41, 42, 43, 44, 45, 50, 51, 52, 53, 54, 55, 56, 57, 62, 63, 64, 65,
-        66, 67, 68, 69, 74, 75, 76, 77, 78, 79, 80, 81, 86, 87, 88, 89, 90, 91, 92, 93, 98, 99, 100, 101, 102, 103, 104,
-        105, 110, 111, 112, 113, 114, 115, 116, 117
+            26, 27, 28, 29, 30, 31, 32, 33, 38, 39, 40, 41, 42, 43, 44, 45, 50, 51, 52, 53, 54, 55, 56, 57, 62, 63, 64, 65,
+            66, 67, 68, 69, 74, 75, 76, 77, 78, 79, 80, 81, 86, 87, 88, 89, 90, 91, 92, 93, 98, 99, 100, 101, 102, 103, 104,
+            105, 110, 111, 112, 113, 114, 115, 116, 117
     };
     private final int BLANC = -1;
     private final int NOIR = 1;
@@ -27,12 +29,15 @@ public class GPosition {
     private boolean droitGrandRoqueBlanc;
     private boolean droitPetitRoqueNoir;
     private int caseEP;
+
     private GPosition() {
         etats = new int[NB_CELLULES];
     }
+
     public static GPosition getInstance() {
         return INSTANCE;
     }
+
     public final void init(final String fen) throws IllegalArgumentException {
         this.fen = fen;
         cp_position = CPosition.getInstance();
@@ -69,33 +74,41 @@ public class GPosition {
             caseEP = CASES[cp_position.getCaseEP()];
         }
 
-       // pseudocoups = new Generateur(this).getCoups();
+        // pseudocoups = new Generateur(this).getCoups();
     }
+
     public void setPseudocoups(ArrayList<GCoups> pseudocoups) {
         this.pseudocoups = pseudocoups;
     }
-    
+
     public int[] getEtats() {
         return etats;
     }
+
     public int getTrait() {
         return trait;
     }
+
     public int getCaseEP() {
         return caseEP;
     }
+
     public boolean getDroitPetitRoqueBlanc() {
         return droitPetitRoqueBlanc;
     }
+
     public boolean getDroitPetitRoqueNoir() {
         return droitPetitRoqueNoir;
     }
+
     public boolean getDroitGrandRoqueNoir() {
         return droitGrandRoqueNoir;
     }
+
     public boolean getDroitGrandRoqueBlanc() {
         return droitGrandRoqueBlanc;
     }
+
     private ArrayList<String> toStringListGCoups() {
         ArrayList<String> result = new ArrayList();
 
@@ -107,6 +120,7 @@ public class GPosition {
 
         return result;
     }
+
     public GPosition copie() {
         GPosition position = new GPosition();
 
@@ -114,6 +128,7 @@ public class GPosition {
 
         return position;
     }
+
     @Override
     public String toString() {
         ArrayList<String> diff = getTest().getDiffStringList();
@@ -124,6 +139,7 @@ public class GPosition {
             return "";
         }
     }
+
     private GPositionTest getTest() {
         GPositionTest valid = new GPositionTest();
         ArrayList<String> lg_coups = toStringListGCoups();
@@ -137,6 +153,7 @@ public class GPosition {
 
         return valid;
     }
+
     private ArrayList<String> getDiff(ArrayList<String> L1, ArrayList<String> L2) {
         L2.removeAll(L1);
         return L2;

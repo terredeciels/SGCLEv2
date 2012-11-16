@@ -1,8 +1,8 @@
 package scalacode
 
-import gposition.GPosition
 import main.Fen
 import main.Ui
+import gposition.GPosition
 import scala.collection.JavaConversions._
 
 object Client {
