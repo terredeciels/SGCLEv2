@@ -11,7 +11,7 @@ class GPosition extends TModele{
 
   var fen: String = null
   var etats: Array[Int] = new Array[Int](NB_CELLULES)
-  var `trait`: Int = 0
+  var traits: Int = 0
   var pseudocoups: ArrayList[GCoups] = null
   var cp_position: CPosition = null
   var droitPetitRoqueBlanc: Boolean = false
@@ -43,10 +43,10 @@ class GPosition extends TModele{
       indice += 1
     }
     if (cp_position.getTrait == Chess.WHITE) {
-      `trait` = BLANC
+      traits = BLANC
     }
     else {
-      `trait` = NOIR
+      traits = NOIR
     }
     droitPetitRoqueBlanc = cp_position.getDroitPetitRoqueBlanc
     droitPetitRoqueNoir = cp_position.getDroitPetitRoqueNoir
@@ -66,7 +66,7 @@ class GPosition extends TModele{
     return etats
   }
   def getTrait: Int = {
-    return `trait`
+    return traits
   }
   def getCaseEP: Int = {
     return caseEP

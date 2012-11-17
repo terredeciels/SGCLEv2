@@ -11,7 +11,7 @@ final class CPosition {
   private final val CASES: Array[Int] = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63)
   private var etats: Array[Int] = null
   private var coups: Array[Short] = null
-  private var `trait`: Int = 0
+  private var traits: Int = 0
   private var droitPetitRoqueBlanc: Boolean = false
   private var droitGrandRoqueNoir: Boolean = false
   private var droitGrandRoqueBlanc: Boolean = false
@@ -25,7 +25,7 @@ final class CPosition {
       etats(caseO) = position.getStone(caseO)
     }
     coups = position.getAllMoves
-    `trait` = position.getToPlay
+    traits = position.getToPlay
     val roques: Int = position.getCastles
     setPetitRoqueNoir((8 & roques) == 8)
     setGrandRoqueNoir((4 & roques) == 4)
@@ -37,7 +37,7 @@ final class CPosition {
     return etats
   }
   def getTrait: Int = {
-    return `trait`
+    return traits
   }
   protected def getCoups: Array[Short] = {
     return coups
