@@ -1,8 +1,8 @@
 package scalacode
 
-import gposition.{TypeDeCoups, GCoups, GPosition}
+import gposition.{TypeCoups, GCoups, GPosition}
 import scala.collection.JavaConversions._
-import gposition.TypeDeCoups.TypeDeCoups
+import gposition.TypeCoups._
 
 class Generateur(val position: GPosition, val couleur: Int) extends TModele {
 
@@ -17,7 +17,7 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   var x: Contexte = new Contexte {
     var entier = 0
     var booleen = false
-    var typeDeCoups = TypeDeCoups.Deplacement
+    var typeDeCoups = TypeCoups.Deplacement
     var cO = 0
     var direction = 0
     var directionsPiece: DIRECTIONPIECE = _
@@ -42,13 +42,13 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   }
   def AjouterCoupsDeplacement = new CFonct {
     def apply(x: Contexte) = {
-      pseudoCoups.add(new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), TypeDeCoups.Deplacement))
+      pseudoCoups.add(new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), TypeCoups.Deplacement))
       x
     }
   }
   def AjouterCoupsPrise = new CFonct {
     def apply(x: Contexte) = {
-      pseudoCoups.add(new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), TypeDeCoups.Prise))
+      pseudoCoups.add(new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), TypeCoups.Prise))
       x
     }
   }
@@ -78,10 +78,10 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   def pieceQuiALeTrait(c: CASE) = !(etats(c) == VIDE) && couleurPiece(c) == couleur
   def typeDePiece(c: CASE) = math.abs(etats(c))
   def typeDePiece(c: CASE, etats: ETATS) = math.abs(etats(c))
-  def ajouterCoups(cO: CASE, cX: CASE, typedecoups: TypeDeCoups) = pseudoCoups.add(new GCoups(etats(cO), cO, cX, etats(cX), typedecoups))
-  def ajouterCoups(cO: CASE, cX: CASE, typedecoups: TypeDeCoups, typepiecepromue: TYPEPIECE) = pseudoCoups.add(new GCoups(etats(cO), cO, cX, etats(cX), typedecoups, typepiecepromue))
+  def ajouterCoups(cO: CASE, cX: CASE, typedecoups: TypeCoups) = pseudoCoups.add(new GCoups(etats(cO), cO, cX, etats(cX), typedecoups))
+  def ajouterCoups(cO: CASE, cX: CASE, typedecoups: TypeCoups, typepiecepromue: TYPEPIECE) = pseudoCoups.add(new GCoups(etats(cO), cO, cX, etats(cX), typedecoups, typepiecepromue))
   def ajouterCoupsEnPassant(sudEstOuOuest: DIRECTION, caseEP: CASE) {
-    pCoups.add(new GCoups(PION, caseEP + sudEstOuOuest, caseEP, 0, TypeDeCoups.EnPassant))
+    pCoups.add(new GCoups(PION, caseEP + sudEstOuOuest, caseEP, 0, TypeCoups.EnPassant))
   }
   def AjouterLeCoups = new CFonct {
     def apply(x: Contexte) = {
@@ -126,17 +126,17 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
     val cX = coups.caseX
     val etats = positionSimuler.getEtats
     coups.typedecoups match {
-      case TypeDeCoups.Deplacement | TypeDeCoups.Prise =>
+      case TypeCoups.Deplacement | TypeCoups.Prise =>
         etats(cX) = etats(cO)
         etats(cO) = VIDE
-      case TypeDeCoups.EnPassant =>
+      case TypeCoups.EnPassant =>
         etats(cX) = etats(cO)
         etats(cO) = VIDE
         etats(cX + nord * couleur) = VIDE
-      case TypeDeCoups.Promotion =>
+      case TypeCoups.Promotion =>
         etats(cX) = coups.piecePromotion
         etats(cO) = VIDE
-      case TypeDeCoups.Roque => //TODO match typeDeCoups : Roque
+      case TypeCoups.Roque => //TODO match typeDeCoups : Roque
       case _ =>
     }
     positionSimuler
@@ -144,12 +144,12 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   def ajouterLesRoquesPossibles = {
     coupsAttaqueRoque = fPseudoCoupsAttaque(position, -couleur)
     if (couleur == BLANC) {
-      if (droitPetitRoque(position.getDroitPetitRoqueBlanc, f1, g1, e1)) pCoups.add(new GCoups(ROI, e1, g1, 0, TypeDeCoups.Roque))
-      if (droitGrandRoque(position.getDroitGrandRoqueBlanc, d1, c1, b1, e1)) pCoups.add(new GCoups(ROI, e1, c1, 0, TypeDeCoups.Roque))
+      if (droitPetitRoque(position.getDroitPetitRoqueBlanc, f1, g1, e1)) pCoups.add(new GCoups(ROI, e1, g1, 0, TypeCoups.Roque))
+      if (droitGrandRoque(position.getDroitGrandRoqueBlanc, d1, c1, b1, e1)) pCoups.add(new GCoups(ROI, e1, c1, 0, TypeCoups.Roque))
     }
     else {
-      if (droitPetitRoque(position.getDroitPetitRoqueNoir, f8, g8, e8)) pCoups.add(new GCoups(ROI, e8, g8, 0, TypeDeCoups.Roque))
-      if (droitGrandRoque(position.getDroitGrandRoqueNoir, d8, c8, b8, e8)) pCoups.add(new GCoups(ROI, e8, c8, 0, TypeDeCoups.Roque))
+      if (droitPetitRoque(position.getDroitPetitRoqueNoir, f8, g8, e8)) pCoups.add(new GCoups(ROI, e8, g8, 0, TypeCoups.Roque))
+      if (droitGrandRoque(position.getDroitGrandRoqueNoir, d8, c8, b8, e8)) pCoups.add(new GCoups(ROI, e8, c8, 0, TypeCoups.Roque))
     }
   }
   def droitPetitRoque(droit: BOOL, cx1: CASE, cx2: CASE, cx3: CASE) = droit && etats(cx1) == VIDE && etats(cx2) == VIDE && attaqueRoque(cx3, cx1, cx2)
@@ -203,11 +203,11 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
       if (rangFinal(x.entier))
         pseudoCoupsPromotion(cO, x.entier)
       else
-        ajouterCoups(cO, x.entier, TypeDeCoups.Deplacement)
+        ajouterCoups(cO, x.entier, TypeCoups.Deplacement)
       if (rangInitial(cO)) {
         x.entier = cO + 2 * NordSudSelonCouleur
         if (CaseEstVide(x).booleen)
-          ajouterCoups(cO, x.entier, TypeDeCoups.Deplacement)
+          ajouterCoups(cO, x.entier, TypeCoups.Deplacement)
       }
     }
 
@@ -219,13 +219,13 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   }
   def diagonalePionAttaqueRoque(cO: CASE, estOuOuest: DIRECTION) {
     val cX = cO + NordSudSelonCouleur + estOuOuest
-    if (existe(cX)) ajouterCoups(cO, cX, TypeDeCoups.Attaque)
+    if (existe(cX)) ajouterCoups(cO, cX, TypeCoups.Attaque)
   }
   def diagonalePionPrise(cO: Int, estOuOuest: DIRECTION) {
     val cX = cO + NordSudSelonCouleur + estOuOuest
     if (pieceAdverse(cX))
       if (rangFinal(cX)) pseudoCoupsPromotion(cO, cX)
-      else ajouterCoups(cO, cX, TypeDeCoups.Prise)
+      else ajouterCoups(cO, cX, TypeCoups.Prise)
   }
-  def pseudoCoupsPromotion(cO: CASE, cX: CASE) = Set(FOU, CAVALIER, DAME, TOUR).foreach(piece => ajouterCoups(cO, cX, TypeDeCoups.Promotion, couleur * piece))
+  def pseudoCoupsPromotion(cO: CASE, cX: CASE) = Set(FOU, CAVALIER, DAME, TOUR).foreach(piece => ajouterCoups(cO, cX, TypeCoups.Promotion, couleur * piece))
 }

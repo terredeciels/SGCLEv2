@@ -1,7 +1,7 @@
 package scalacode
 
 import gposition.{GPosition, GCoups}
-import gposition.TypeDeCoups._
+import gposition.TypeCoups._
 
 trait TModele {
   type BOOL = Boolean
@@ -13,7 +13,7 @@ trait TModele {
   type ETAT = Int
   type ETATS = Array[ETAT]
   type COUPS = GCoups
-  type TYPEDECOUPS = TypeDeCoups
+  type TYPEDECOUPS = TypeCoups
   type POSITION = GPosition
   type LISTE[T] = java.util.ArrayList[T]
   type LISTEDECOUPS = LISTE[COUPS]
@@ -26,7 +26,7 @@ trait TModele {
   abstract class Contexte {
     var directionsPiece: DIRECTIONPIECE
     var direction: DIRECTION
-    var typeDeCoups: TYPEDECOUPS
+    var typeDeCoups: TypeCoups
     var cO: CASE
     var entier: Int
     var booleen: Boolean
