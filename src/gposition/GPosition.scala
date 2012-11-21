@@ -4,123 +4,92 @@ import chesspresso._
 import java.util._
 import org.apache.commons.collections.iterators._
 import scalacode.TModele
+import scala.collection.JavaConversions._
 
-class GPosition extends TModele{
+class GPosition extends TModele {
 
-   var fen: String = _
-   var etats: Array[Int] = _
-   var traits: Int = 0
-   var pseudocoups: ArrayList[GCoups] = _
-   var cp_position: CPosition = _
-   var droitPetitRoqueBlanc: Boolean = false
-   var droitGrandRoqueNoir: Boolean = false
-   var droitGrandRoqueBlanc: Boolean = false
-   var droitPetitRoqueNoir: Boolean = false
-   var caseEP: Int = 0
-    etats = new Array[Int](NB_CELLULES)
+  var fen: String = _
+  var etats: Array[Int] = _
+  var traits = 0
+  var pseudocoups: ArrayList[GCoups] = _
+  var cp_position: CPosition = _
+  var droitPetitRoqueBlanc = false
+  var droitGrandRoqueNoir = false
+  var droitGrandRoqueBlanc = false
+  var droitPetitRoqueNoir = false
+  var caseEP = 0
+  etats = new Array[Int](NB_CELLULES)
 
   final def init(fen: String) {
     this.fen = fen
     cp_position = new CPosition
     cp_position.init(fen)
-
-      var caseO: Int = 0
-      while (caseO < NB_CELLULES) {
-        {
-          etats(caseO) = OUT
-        }
-        ({
-          caseO += 1; caseO - 1
-        })
+    var caseO = 0
+    while (caseO < NB_CELLULES) {
+      {
+        etats(caseO) = OUT
       }
+      ({
+        caseO += 1;
+        caseO - 1
+      })
+    }
 
-    val itetats: ArrayIterator = new ArrayIterator(cp_position.getEtats)
-    var indice: Int = 0
+    val itetats = new ArrayIterator(cp_position.etats)
+    var indice = 0
     while (itetats.hasNext) {
       val e: Integer = itetats.next.asInstanceOf[Integer]
       etats(CASES(indice)) = e
       indice += 1
     }
-    if (cp_position.getTrait == Chess.WHITE) {
-      traits = BLANC
-    }
-    else {
-      traits = NOIR
-    }
-    droitPetitRoqueBlanc = cp_position.getDroitPetitRoqueBlanc
-    droitPetitRoqueNoir = cp_position.getDroitPetitRoqueNoir
-    droitGrandRoqueBlanc = cp_position.getDroitGrandRoqueBlanc
-    droitGrandRoqueNoir = cp_position.getDroitGrandRoqueNoir
-    if (cp_position.getCaseEP == PAS_DE_CASE) {
-      caseEP = -1
-    }
-    else {
-      caseEP = CASES(cp_position.getCaseEP)
-    }
+    if (cp_position.traits == Chess.WHITE) traits = BLANC
+    else traits = NOIR
+
+    droitPetitRoqueBlanc = cp_position.droitPetitRoqueBlanc
+    droitPetitRoqueNoir = cp_position.droitPetitRoqueNoir
+    droitGrandRoqueBlanc = cp_position.droitGrandRoqueBlanc
+    droitGrandRoqueNoir = cp_position.droitGrandRoqueNoir
+    if (cp_position.caseEP == PAS_DE_CASE) caseEP = -1
+    else caseEP = CASES(cp_position.caseEP)
+
   }
-  def setPseudocoups(pseudocoups: ArrayList[GCoups]) {
-    this.pseudocoups = pseudocoups
-  }
-  def getEtats: Array[Int] = {
-    return etats
-  }
-  def getTrait: Int = {
-    return traits
-  }
-  def getCaseEP: Int = {
-    return caseEP
-  }
-  def getDroitPetitRoqueBlanc: Boolean = {
-    return droitPetitRoqueBlanc
-  }
-  def getDroitPetitRoqueNoir: Boolean = {
-    return droitPetitRoqueNoir
-  }
-  def getDroitGrandRoqueNoir: Boolean = {
-    return droitGrandRoqueNoir
-  }
-  def getDroitGrandRoqueBlanc: Boolean = {
-    return droitGrandRoqueBlanc
-  }
-  private def toStringListGCoups: ArrayList[String] = {
-    val result: ArrayList[String] = new ArrayList[String]
-    import scala.collection.JavaConversions._
-    for (c <- pseudocoups) {
-      result.add(c.getString(c))
-    }
+
+  def toStringListGCoups = {
+    val result = new ArrayList[String]
+    for (c <- pseudocoups) result.add(c.getString)
     Collections.sort(result)
-    return result
+    result
   }
-  def copie: GPosition = {
-    val position: GPosition = new GPosition
+  def copie = {
+    val position = new GPosition
     System.arraycopy(etats, 0, position.etats, 0, NB_CELLULES)
-    return position
+    position
   }
-  override def toString: String = {
-    val diff = getTest.getDiffStringList
-    if (!diff.isEmpty) {
-      return fen + '\n' + "Coups ChessPresso:" + "\n" + cp_position.toStringListCPCoups
-      + '\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diff + "\n"
-    }
-    else {
-      return ""
-    }
+  override def toString = {
+    if (!diffStringList.isEmpty)
+      fen + '\n' + "Coups ChessPresso:" + "\n" + cp_position.toStringListCPCoups
+    +'\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diffStringList + "\n"
+    else
+    cp_position + "\n"
+    //""
+    //+ toStringListGCoups + "\n"
+
   }
-  private def getTest: GPositionTest = {
-    val valid: GPositionTest = new GPositionTest
-    val lg_coups: ArrayList[String] = toStringListGCoups
-    val lcp_coups: ArrayList[String] = cp_position.toStringListCPCoups
+  def diffStringList = {
+    val lg_coups = toStringListGCoups
+    val lcp_coups = cp_position.toStringListCPCoups
+    var diff = new ArrayList[String]
     if (lg_coups.size <= lcp_coups.size) {
-      valid.setDiffStringList(getDiff(lg_coups, lcp_coups))
+      diff = getDiff(lg_coups, lcp_coups)
     }
     else {
-      valid.setDiffStringList(getDiff(lcp_coups, lg_coups))
+      diff = getDiff(lcp_coups, lg_coups)
     }
-    return valid
+    diff
   }
-  private def getDiff(L1: ArrayList[String], L2: ArrayList[String]): ArrayList[String] = {
+  def getDiff(L1: ArrayList[String], L2: ArrayList[String]) = {
     L2.removeAll(L1)
-    return L2
+    L2
   }
 
 }

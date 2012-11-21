@@ -23,7 +23,7 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
     var directionsPiece: DIRECTIONPIECE = _
   }
 
-  def this(position: GPosition) = this(position, position.getTrait)
+  def this(position: GPosition) = this(position, position.traits)
 
   val DIRECTIONS = Map[Int, DIRECTIONPIECE](CAVALIER -> DIR_CAVALIER, FOU -> DIR_FOU, TOUR -> DIR_TOUR,
     DAME -> DIR_DAME, ROI -> DIR_ROI)
@@ -32,7 +32,7 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
 
   def fDirections(code: TYPEPIECE): DIRECTIONPIECE = DIRECTIONS.get(code).get
   def fGlissement(code: TYPEPIECE): CFonct = GLISSEMENT.get(code).get
-  def etats = position.getEtats
+  def etats = position.etats
   def NordSudSelonCouleur: DIRECTION = if (couleur == BLANC) nord else sud
   def AjouterCoups = new CFonct {
     def apply(x: Contexte) = {
@@ -114,7 +114,7 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   }
   def RoiEstEnEchec = new CFonct {
     def apply(x: Contexte) = {
-      val etats = positionSimuler.getEtats
+      val etats = positionSimuler.etats
       val caseRoi = CASES.find(cO => typeDePiece(cO, etats) == ROI && couleurPiece(cO, etats) == couleur).get
       x.booleen = !pseudoCoupsPositionSimuler.forall(coups => coups.caseX != caseRoi)
       x
@@ -124,7 +124,7 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
     val positionSimuler = position.copie
     val cO = coups.caseO
     val cX = coups.caseX
-    val etats = positionSimuler.getEtats
+    val etats = positionSimuler.etats
     coups.typedecoups match {
       case TypeCoups.Deplacement | TypeCoups.Prise =>
         etats(cX) = etats(cO)
@@ -144,19 +144,19 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   def ajouterLesRoquesPossibles = {
     coupsAttaqueRoque = fPseudoCoupsAttaque(position, -couleur)
     if (couleur == BLANC) {
-      if (droitPetitRoque(position.getDroitPetitRoqueBlanc, f1, g1, e1)) pCoups.add(new GCoups(ROI, e1, g1, 0, TypeCoups.Roque))
-      if (droitGrandRoque(position.getDroitGrandRoqueBlanc, d1, c1, b1, e1)) pCoups.add(new GCoups(ROI, e1, c1, 0, TypeCoups.Roque))
+      if (droitPetitRoque(position.droitPetitRoqueBlanc, f1, g1, e1)) pCoups.add(new GCoups(ROI, e1, g1, 0, TypeCoups.Roque))
+      if (droitGrandRoque(position.droitGrandRoqueBlanc, d1, c1, b1, e1)) pCoups.add(new GCoups(ROI, e1, c1, 0, TypeCoups.Roque))
     }
     else {
-      if (droitPetitRoque(position.getDroitPetitRoqueNoir, f8, g8, e8)) pCoups.add(new GCoups(ROI, e8, g8, 0, TypeCoups.Roque))
-      if (droitGrandRoque(position.getDroitGrandRoqueNoir, d8, c8, b8, e8)) pCoups.add(new GCoups(ROI, e8, c8, 0, TypeCoups.Roque))
+      if (droitPetitRoque(position.droitPetitRoqueNoir, f8, g8, e8)) pCoups.add(new GCoups(ROI, e8, g8, 0, TypeCoups.Roque))
+      if (droitGrandRoque(position.droitGrandRoqueNoir, d8, c8, b8, e8)) pCoups.add(new GCoups(ROI, e8, c8, 0, TypeCoups.Roque))
     }
   }
   def droitPetitRoque(droit: BOOL, cx1: CASE, cx2: CASE, cx3: CASE) = droit && etats(cx1) == VIDE && etats(cx2) == VIDE && attaqueRoque(cx3, cx1, cx2)
   def droitGrandRoque(droit: BOOL, cx1: CASE, cx2: CASE, cx3: CASE, cx4: CASE) = droit && etats(cx1) == VIDE && etats(cx2) == VIDE && etats(cx3) == VIDE && attaqueRoque(cx4, cx1, cx2)
   def attaqueRoque(cx: CASE, cx1: CASE, cx2: CASE): BOOL = coupsAttaqueRoque.forall(coups => coups.caseX != cx && coups.caseX != cx1 && coups.caseX != cx2)
   def ajouterLesPionEnPassantPossibles() {
-    val caseEP = position.getCaseEP
+    val caseEP = position.caseEP
     if (caseEP != PAS_DE_CASE) Set(est, ouest)
       .foreach(estOuOuest =>
       if (fPion(caseEP + nord * couleur + estOuOuest, couleur)) ajouterCoupsEnPassant(nord * couleur + estOuOuest, caseEP))
