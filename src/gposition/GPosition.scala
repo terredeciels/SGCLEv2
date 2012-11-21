@@ -86,7 +86,7 @@ class GPosition extends TModele{
     val result: ArrayList[String] = new ArrayList[String]
     import scala.collection.JavaConversions._
     for (c <- pseudocoups) {
-      result.add(c.getString(c)) //TODO c
+      result.add(c.getString(c))
     }
     Collections.sort(result)
     return result
@@ -97,9 +97,10 @@ class GPosition extends TModele{
     return position
   }
   override def toString: String = {
-    val diff: ArrayList[String] = getTest.getDiffStringList
+    val diff = getTest.getDiffStringList
     if (!diff.isEmpty) {
-      return fen + '\n' + "Coups ChessPresso:" + "\n" + cp_position.toStringListCPCoups + '\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diff + "\n"
+      return fen + '\n' + "Coups ChessPresso:" + "\n" + cp_position.toStringListCPCoups
+      + '\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diff + "\n"
     }
     else {
       return ""

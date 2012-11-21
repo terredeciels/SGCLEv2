@@ -4,16 +4,24 @@ import main.Fen
 import main.Ui
 import gposition.GPosition
 import scala.collection.JavaConversions._
+import javax.swing.event.TableModelEvent
 
 object Client {
 
   def main(args: Array[String]) {
-    val position: GPosition = new GPosition
-    val command: Array[String] = new Array[String](3)
+    val position = new GPosition
+
+    val fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+    position.init(fen)
+    position.setPseudocoups(new Generateur(position).fCoupsLegaux)
+    System.out.println(position)
+    System.exit(0)
+
+    val command = new Array[String](3)
     command(0) = "-cli"
     // command(1) = "F:/ProgmEchecsNotes/shirov.pgn" //814
     command(1) = "F:/ProgmEchecsNotes/paulsen.pgn"; //322
-   //command(1) = "F:/ProgmEchecsNotes/ashley.pgn"; //414
+    //command(1) = "F:/ProgmEchecsNotes/ashley.pgn"; //414
     //    command[1] = "F:/ProgmEchecsNotes/bird.pgn";//353
     //        command[1] = "F:/ProgmEchecsNotes/Tartakower.pgn";//1290
     // command(1) = "F:/ProgmEchecsNotes/Capablanca.pgn"; //597
