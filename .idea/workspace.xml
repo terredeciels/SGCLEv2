@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="853234ab-9fa4-4853-a770-38f5df76ad5c" name="Default" comment="av refactor GCoups">
+    <list default="true" id="853234ab-9fa4-4853-a770-38f5df76ad5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SGCLEv2.iws" />
@@ -77,28 +77,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Client.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="46" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CPosition.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gposition/CPosition.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="2" selection-start="939" selection-end="989" vertical-scroll-proportion="0.39285713">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GPosition.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GPosition.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="68" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
+            <state line="80" column="23" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.39158577">
               <folding>
                 <element signature="e#19#39#0" expanded="true" />
               </folding>
@@ -106,11 +88,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TModele.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scalacode/TModele.scala">
+      <file leaf-file-name="Client.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="3" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="22" column="66" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#19#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +103,7 @@
   </component>
   <component name="FindManager">
     <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
+      <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
@@ -134,14 +118,14 @@
         <option value="$PROJECT_DIR$/src/gposition/GPositionTest.java" />
         <option value="$PROJECT_DIR$/src/TYPE_DE_COUPS.scala" />
         <option value="$PROJECT_DIR$/src/gposition/TypeDeCoups.scala" />
-        <option value="$PROJECT_DIR$/src/gposition/GPositionTest.scala" />
         <option value="$PROJECT_DIR$/src/gposition/TYPE_DE_COUPS.scala" />
         <option value="$PROJECT_DIR$/src/gposition/TypeCoups.scala" />
-        <option value="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GCoups.scala" />
-        <option value="$PROJECT_DIR$/src/scalacode/Client.scala" />
         <option value="$PROJECT_DIR$/src/scalacode/TModele.scala" />
+        <option value="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
         <option value="$PROJECT_DIR$/src/gposition/CPosition.scala" />
+        <option value="$PROJECT_DIR$/src/gposition/GPositionTest.scala" />
+        <option value="$PROJECT_DIR$/src/scalacode/Client.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GPosition.scala" />
       </list>
     </option>
@@ -516,7 +500,11 @@
       <created>1353509935578</created>
       <updated>1353509935578</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="passed">
+      <created>1353511580890</created>
+      <updated>1353511580890</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -546,7 +534,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37257144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" sideWeight="0.50030655" order="8" side_tool="true" content_ui="tabs" />
@@ -557,8 +545,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16676885" sideWeight="0.67085713" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32457143" sideWeight="0.4954016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16676885" sideWeight="0.73714286" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26285714" sideWeight="0.4954016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -602,7 +590,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="av refactor GCoups" />
+    <option name="LAST_COMMIT_MESSAGE" value="passed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -622,6 +610,7 @@
     <MESSAGE value="avant conversion gposition auto en scala" />
     <MESSAGE value="tester boucle infinie pour une position" />
     <MESSAGE value="av refactor GCoups" />
+    <MESSAGE value="passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -645,23 +634,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scalacode/Generateur.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="819" column="16" selection-start="27913" selection-end="27913" vertical-scroll-proportion="0.33184856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gposition/GPositionTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="156" selection-end="156" vertical-scroll-proportion="0.48410758">
           <folding />
         </state>
       </provider>
@@ -675,33 +650,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="46" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scalacode/TModele.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="3" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.0">
+        <state line="46" column="0" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.3321234">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
+    <entry file="file://$PROJECT_DIR$/src/scalacode/Generateur.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="68" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#19#39#0" expanded="true" />
-          </folding>
+        <state line="117" column="0" selection-start="4790" selection-end="4790" vertical-scroll-proportion="0.3321234">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gposition/CPosition.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="2" selection-start="939" selection-end="989" vertical-scroll-proportion="0.39285713">
-          <folding />
+        <state line="25" column="45" selection-start="708" selection-end="708" vertical-scroll-proportion="0.6485849">
+          <folding>
+            <element signature="e#19#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="66" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#19#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="23" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.39158577">
+          <folding>
+            <element signature="e#19#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
