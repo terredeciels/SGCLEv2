@@ -60,17 +60,20 @@ class GPosition extends TModele {
     Collections.sort(result)
     result
   }
+
   def copie = {
     val position = new GPosition
     System.arraycopy(etats, 0, position.etats, 0, NB_CELLULES)
     position
   }
   override def toString = {
-    if (!diffStringList.isEmpty)
+    if (!diffStringList.isEmpty) {
       fen + '\n' + "Coups ChessPresso:" + "\n" + cp_position.toStringListCPCoups
-    +'\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diffStringList + "\n"
-    else
-    cp_position + "\n"
+    +'\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diffStringList + "\n"   }
+    else  {
+     ""
+     // + cp_position.toStringListCPCoups + "\n"
+    }
     //""
     //+ toStringListGCoups + "\n"
 
