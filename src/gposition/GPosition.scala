@@ -1,17 +1,16 @@
 package gposition
 
 import chesspresso._
-import java.util._
-import org.apache.commons.collections.iterators._
+//import org.apache.commons.collections.iterators._
 import scalacode.TModele
-import scala.collection.JavaConversions._
+import collection.mutable.ArrayBuffer
 
 class GPosition extends TModele {
 
   var fen: String = _
   var etats: Array[Int] = _
   var traits = 0
-  var pseudocoups: ArrayList[GCoups] = _
+  var pseudocoups: ArrayBuffer[GCoups] = _
   var cp_position: CPosition = _
   var droitPetitRoqueBlanc = false
   var droitGrandRoqueNoir = false
@@ -24,24 +23,15 @@ class GPosition extends TModele {
     this.fen = fen
     cp_position = new CPosition
     cp_position.init(fen)
-    var caseO = 0
-    while (caseO < NB_CELLULES) {
-      {
-        etats(caseO) = OUT
-      }
-      ({
-        caseO += 1;
-        caseO - 1
-      })
-    }
+    for (caseO <- 0 to NB_CELLULES - 1) etats(caseO) = OUT
 
-    val itetats = new ArrayIterator(cp_position.etats)
+    val itetats = cp_position.etats.iterator
     var indice = 0
     while (itetats.hasNext) {
-      val e: Integer = itetats.next.asInstanceOf[Integer]
-      etats(CASES(indice)) = e
+      etats(CASES(indice)) = itetats.next.asInstanceOf[java.lang.Integer]
       indice += 1
     }
+
     if (cp_position.traits == Chess.WHITE) traits = BLANC
     else traits = NOIR
 
@@ -55,9 +45,9 @@ class GPosition extends TModele {
   }
 
   def toStringListGCoups = {
-    val result = new ArrayList[String]
-    for (c <- pseudocoups) result.add(c.getString)
-    Collections.sort(result)
+    val result = new ArrayBuffer[String]
+    for (c <- pseudocoups) result += c.getString
+    result.sorted
     result
   }
 
@@ -69,10 +59,11 @@ class GPosition extends TModele {
   override def toString = {
     if (!diffStringList.isEmpty) {
       fen + '\n' + "Coups ChessPresso:" + "\n" + cp_position.toStringListCPCoups
-    +'\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diffStringList + "\n"   }
-    else  {
-     ""
-     // + cp_position.toStringListCPCoups + "\n"
+      +'\n' + "Coups GCLE:" + "\n" + toStringListGCoups + "\n" + "Diff:" + "\n" + diffStringList + "\n"
+    }
+    else {
+      ""
+      // + cp_position.toStringListCPCoups + "\n"
     }
     //""
     //+ toStringListGCoups + "\n"
@@ -81,7 +72,7 @@ class GPosition extends TModele {
   def diffStringList = {
     val lg_coups = toStringListGCoups
     val lcp_coups = cp_position.toStringListCPCoups
-    var diff = new ArrayList[String]
+    var diff = new ArrayBuffer[String]
     if (lg_coups.size <= lcp_coups.size) {
       diff = getDiff(lg_coups, lcp_coups)
     }
@@ -90,9 +81,9 @@ class GPosition extends TModele {
     }
     diff
   }
-  def getDiff(L1: ArrayList[String], L2: ArrayList[String]) = {
-    L2.removeAll(L1)
-    L2
+  def getDiff(L1: ArrayBuffer[String], L2: ArrayBuffer[String]) = {
+    L2 --= L1
+    //L2
   }
 
 }

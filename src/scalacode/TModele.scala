@@ -2,6 +2,7 @@ package scalacode
 
 import gposition.{GPosition, GCoups}
 import gposition.TypeCoups._
+import collection.mutable.ArrayBuffer
 
 trait TModele {
   type BOOL = Boolean
@@ -15,13 +16,10 @@ trait TModele {
   type COUPS = GCoups
   type TYPEDECOUPS = TypeCoups
   type POSITION = GPosition
-  type LISTE[T] = java.util.ArrayList[T]
+  type LISTE[T] = ArrayBuffer[T]
   type LISTEDECOUPS = LISTE[COUPS]
   type DIRECTIONPIECE = Array[DIRECTION]
   type CFonct = Contexte => Contexte
-
-  //  def fPseudoCoupsGlissant(x:Contexte):Contexte
-  //  def fPseudoCoupsNonGlissant(x :Contexte):Contexte
 
   abstract class Contexte {
     var directionsPiece: DIRECTIONPIECE

@@ -32,7 +32,7 @@ object Client {
     // command(1) = "F:/ProgmEchecsNotes/Motylev.pgn";//1169
 
     Ui.main(command)
-    for (f <- Fen.getFenList) {
+    for (f <- Fen.getFenList) {   // necessite scala.collection.JavaConversions._
       position.init(f)
       position.pseudocoups = new Generateur(position).fCoupsLegaux
       System.out.print(position)

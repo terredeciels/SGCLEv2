@@ -5,6 +5,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gposition/CPosition.scala" afterPath="$PROJECT_DIR$/src/gposition/CPosition.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gposition/GPosition.scala" afterPath="$PROJECT_DIR$/src/gposition/GPosition.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scalacode/Client.scala" afterPath="$PROJECT_DIR$/src/scalacode/Client.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scalacode/Generateur.scala" afterPath="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scalacode/TModele.scala" afterPath="$PROJECT_DIR$/src/scalacode/TModele.scala" />
     </list>
     <ignored path="SGCLEv2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +72,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -78,7 +81,30 @@
     <favorites_list name="SGCLEv2" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Client.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="17" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#19#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GPosition.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="25" selection-start="889" selection-end="889" vertical-scroll-proportion="0.70212764">
+              <folding>
+                <element signature="e#19#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -100,11 +126,11 @@
         <option value="$PROJECT_DIR$/src/gposition/TYPE_DE_COUPS.scala" />
         <option value="$PROJECT_DIR$/src/gposition/TypeCoups.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GCoups.scala" />
-        <option value="$PROJECT_DIR$/src/scalacode/TModele.scala" />
-        <option value="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GPositionTest.scala" />
-        <option value="$PROJECT_DIR$/src/scalacode/Client.scala" />
+        <option value="$PROJECT_DIR$/src/scalacode/TModele.scala" />
         <option value="$PROJECT_DIR$/src/gposition/CPosition.scala" />
+        <option value="$PROJECT_DIR$/src/scalacode/Client.scala" />
+        <option value="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GPosition.scala" />
       </list>
     </option>
@@ -160,6 +186,30 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SGCLEv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SGCLEv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,30 +270,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGCLEv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGCLEv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,9 +285,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
@@ -290,24 +316,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -333,6 +341,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -491,7 +517,11 @@
       <created>1353517176718</created>
       <updated>1353517176718</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="simplifications">
+      <created>1353519709000</created>
+      <updated>1353519709000</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -521,6 +551,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37257144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" sideWeight="0.50030655" order="8" side_tool="true" content_ui="tabs" />
@@ -531,11 +562,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16676885" sideWeight="0.624" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.376" sideWeight="0.4954016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16676885" sideWeight="0.67542857" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32457143" sideWeight="0.4954016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -613,137 +643,106 @@
         <state line="4" column="16" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://F:/Libraries/pgn2fen.jar!/main/Fen.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="56" selection-start="348" selection-end="348" vertical-scroll-proportion="-9.68">
-          <folding>
-            <element signature="e#0#475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="819" column="16" selection-start="27913" selection-end="27913" vertical-scroll-proportion="0.33184856" />
       </provider>
     </entry>
+    <entry file="jar://F:/Libraries/ChessPresso.jar!/chesspresso/move/Move.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="35" selection-start="3748" selection-end="3748" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://F:/Libraries/Chesspresso-lib-0.9.2/src/chesspresso/move/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="246" column="32" selection-start="9987" selection-end="9987" vertical-scroll-proportion="3.337264" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="18" selection-start="10169" selection-end="10169" vertical-scroll-proportion="0.33254716">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Libraries/commons-collections-3.2.1/commons-collections-3.2.1.jar!/org/apache/commons/collections/iterators/ArrayIterator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="28" selection-start="896" selection-end="896" vertical-scroll-proportion="-9.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="13" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gposition/GCoups.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="701" selection-end="701" vertical-scroll-proportion="0.82323235">
+        <state line="4" column="4" selection-start="73" selection-end="73" vertical-scroll-proportion="0.16087751">
           <folding>
             <element signature="e#19#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/scala/src/scala-library-src.jar!/scala/collection/JavaConversions.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="7" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.33214286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gposition/CPosition.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="17" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.9599057">
+          <folding>
+            <element signature="e#19#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Libraries/pgn2fen.jar!/main/Fen.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="56" selection-start="348" selection-end="348" vertical-scroll-proportion="0.4238921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scalacode/TModele.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.3321234">
-          <folding />
+        <state line="21" column="36" selection-start="537" selection-end="537" vertical-scroll-proportion="0.8384755">
+          <folding>
+            <element signature="e#19#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scalacode/Generateur.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="4790" selection-end="4790" vertical-scroll-proportion="0.3321234">
-          <folding />
+        <state line="3" column="31" selection-start="95" selection-end="95" vertical-scroll-proportion="0.11978222">
+          <folding>
+            <element signature="e#19#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="66" selection-start="662" selection-end="662" vertical-scroll-proportion="0.5177994">
+        <state line="7" column="17" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/Libraries/ChessPresso.jar!/chesspresso/move/Move.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="35" selection-start="3748" selection-end="3748" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Libraries/Chesspresso-lib-0.9.2/src/chesspresso/move/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="32" selection-start="9987" selection-end="9987" vertical-scroll-proportion="3.337264">
-          <folding>
-            <element signature="docComment;class#Move#0" expanded="false" />
-            <element signature="docComment;method#normalizeOrder#0;class#Move#0" expanded="false" />
-            <element signature="method#normalizeOrder#0;class#Move#0" expanded="false" />
-            <element signature="docComment;field#NO_MOVE#0;class#Move#0" expanded="false" />
-            <element signature="docComment;field#ILLEGAL_MOVE#0;class#Move#0" expanded="false" />
-            <element signature="docComment;field#OTHER_SPECIALS#0;class#Move#0" expanded="false" />
-            <element signature="docComment;field#NUM_OF_OTHER_SPECIALS#0;class#Move#0" expanded="false" />
-            <element signature="initializer##0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getRegularMove#0;class#Move#0" expanded="false" />
-            <element signature="method#getRegularMove#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getPawnMove#0;class#Move#0" expanded="false" />
-            <element signature="method#getPawnMove#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getEPMove#0;class#Move#0" expanded="false" />
-            <element signature="method#getEPMove#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getShortCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#getShortCastle#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getLongCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#getLongCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#isCapturing#0;class#Move#0" expanded="false" />
-            <element signature="method#isPromotion#0;class#Move#0" expanded="false" />
-            <element signature="method#getPromotionPiece#0;class#Move#0" expanded="false" />
-            <element signature="method#isEPMove#0;class#Move#0" expanded="false" />
-            <element signature="method#isCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#isShortCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#isLongCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#isSpecial#0;class#Move#0" expanded="false" />
-            <element signature="method#isValid#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#createIllegalMove#0;class#Move#0" expanded="false" />
-            <element signature="method#createIllegalMove#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#createCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#createCastle#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#createShortCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#createShortCastle#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#createLongCastle#0;class#Move#0" expanded="false" />
-            <element signature="method#createLongCastle#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#Move#0;class#Move#0" expanded="false" />
-            <element signature="method#getPromo#0;class#Move#0" expanded="false" />
-            <element signature="method#getFromSqi#1;class#Move#0" expanded="false" />
-            <element signature="method#getToSqi#1;class#Move#0" expanded="false" />
-            <element signature="method#getMovingPiece#0;class#Move#0" expanded="false" />
-            <element signature="method#getColFrom#0;class#Move#0" expanded="false" />
-            <element signature="method#getRowFrom#0;class#Move#0" expanded="false" />
-            <element signature="method#isCapturing#1;class#Move#0" expanded="false" />
-            <element signature="method#isPromotion#1;class#Move#0" expanded="false" />
-            <element signature="method#isCheck#0;class#Move#0" expanded="false" />
-            <element signature="method#isMate#0;class#Move#0" expanded="false" />
-            <element signature="method#isShortCastle#1;class#Move#0" expanded="false" />
-            <element signature="method#isLongCastle#1;class#Move#0" expanded="false" />
-            <element signature="method#isValid#1;class#Move#0" expanded="false" />
-            <element signature="method#isWhiteMove#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getLAN#0;class#Move#0" expanded="false" />
-            <element signature="method#getLAN#0;class#Move#0" expanded="false" />
-            <element signature="docComment;method#getSAN#0;class#Move#0" expanded="false" />
-            <element signature="method#getSAN#0;class#Move#0" expanded="false" />
-            <element signature="method#toString#0;class#Move#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="26" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.5589623">
+        <state line="33" column="25" selection-start="889" selection-end="889" vertical-scroll-proportion="0.70212764">
           <folding>
             <element signature="e#19#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gposition/CPosition.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="46" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.7924528">
-          <folding>
-            <element signature="e#19#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

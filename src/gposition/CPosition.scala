@@ -2,7 +2,10 @@ package gposition
 
 import chesspresso.move.Move
 import chesspresso.position.Position
-import java.util.{Collections, ArrayList}
+import collection.mutable.ArrayBuffer
+
+//import java.util.{Collections, ArrayList}
+
 import scalacode.TModele
 
 class CPosition extends TModele {
@@ -31,15 +34,10 @@ class CPosition extends TModele {
   }
 
   def toStringListCPCoups = {
-    val result = new ArrayList[String]
-    for (c <- coups) result.add(Move.getString(c))
-    Collections.sort(result)
+    val result = new ArrayBuffer[String]
+    for (c <- coups) result += Move.getString(c)
+    result.sorted
     result
   }
-//  def toIntListCPCoups = {
-//    val result = new ArrayList[String]
-//    for (c <- coups) result.add( Move.getBinaryString(c))
-//    Collections.sort(result)
-//    result
-//  }
+
 }
