@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="853234ab-9fa4-4853-a770-38f5df76ad5c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gposition/CPosition.scala" afterPath="$PROJECT_DIR$/src/gposition/CPosition.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGCLEv2.iml" afterPath="$PROJECT_DIR$/SGCLEv2.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gposition/GCoups.scala" afterPath="$PROJECT_DIR$/src/gposition/GCoups.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gposition/GPosition.scala" afterPath="$PROJECT_DIR$/src/gposition/GPosition.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scalacode/Client.scala" afterPath="$PROJECT_DIR$/src/scalacode/Client.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scalacode/Generateur.scala" afterPath="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scalacode/TModele.scala" afterPath="$PROJECT_DIR$/src/scalacode/TModele.scala" />
     </list>
     <ignored path="SGCLEv2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,9 +95,20 @@
       <file leaf-file-name="GPosition.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="25" selection-start="889" selection-end="889" vertical-scroll-proportion="0.70212764">
+            <state line="60" column="46" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.021276595">
               <folding>
                 <element signature="e#19#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Generateur.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scalacode/Generateur.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="84" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#19#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,14 +134,14 @@
         <option value="$PROJECT_DIR$/src/TYPE_DE_COUPS.scala" />
         <option value="$PROJECT_DIR$/src/gposition/TypeDeCoups.scala" />
         <option value="$PROJECT_DIR$/src/gposition/TYPE_DE_COUPS.scala" />
-        <option value="$PROJECT_DIR$/src/gposition/TypeCoups.scala" />
-        <option value="$PROJECT_DIR$/src/gposition/GCoups.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GPositionTest.scala" />
         <option value="$PROJECT_DIR$/src/scalacode/TModele.scala" />
         <option value="$PROJECT_DIR$/src/gposition/CPosition.scala" />
         <option value="$PROJECT_DIR$/src/scalacode/Client.scala" />
-        <option value="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
         <option value="$PROJECT_DIR$/src/gposition/GPosition.scala" />
+        <option value="$PROJECT_DIR$/src/gposition/TypeCoups.scala" />
+        <option value="$PROJECT_DIR$/src/gposition/GCoups.scala" />
+        <option value="$PROJECT_DIR$/src/scalacode/Generateur.scala" />
       </list>
     </option>
   </component>
@@ -521,7 +531,11 @@
       <created>1353519709000</created>
       <updated>1353519709000</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="simplifications">
+      <created>1353588345546</created>
+      <updated>1353588345546</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -563,7 +577,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16676885" sideWeight="0.67542857" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32457143" sideWeight="0.4954016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32457143" sideWeight="0.4954016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -638,11 +652,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gposition/TypeCoups.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="819" column="16" selection-start="27913" selection-end="27913" vertical-scroll-proportion="0.33184856" />
@@ -679,15 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gposition/GCoups.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="73" selection-end="73" vertical-scroll-proportion="0.16087751">
-          <folding>
-            <element signature="e#19#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/scala/src/scala-library-src.jar!/scala/collection/JavaConversions.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="7" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.33214286">
@@ -720,15 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scalacode/Generateur.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="95" selection-end="95" vertical-scroll-proportion="0.11978222">
-          <folding>
-            <element signature="e#19#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scalacode/Client.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="17" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
@@ -738,9 +729,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="487" column="30" selection-start="19231" selection-end="19231" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gposition/TypeCoups.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="155" selection-end="155" vertical-scroll-proportion="0.20220588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gposition/GCoups.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="0.20715632">
+          <folding>
+            <element signature="e#19#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scalacode/Generateur.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="84" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#19#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gposition/GPosition.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="889" selection-end="889" vertical-scroll-proportion="0.70212764">
+        <state line="60" column="46" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.021276595">
           <folding>
             <element signature="e#19#39#0" expanded="true" />
           </folding>
@@ -776,7 +799,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>pgn2fen</last-edited>
+          <last-edited>ChessPresso</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

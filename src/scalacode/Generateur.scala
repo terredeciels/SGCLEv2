@@ -16,7 +16,7 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   var x: Contexte = new Contexte {
     var entier = 0
     var booleen = false
-    var typeDeCoups = TypeCoups.Deplacement
+    var typeDeCoups = Deplacement
     var cO = 0
     var direction = 0
     var directionsPiece: DIRECTIONPIECE = _
@@ -41,13 +41,13 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
   }
   def AjouterCoupsDeplacement = new CFonct {
     def apply(x: Contexte) = {
-      pseudoCoups += new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), TypeCoups.Deplacement)
+      pseudoCoups += new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), Deplacement)
       x
     }
   }
   def AjouterCoupsPrise = new CFonct {
     def apply(x: Contexte) = {
-      pseudoCoups += new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), TypeCoups.Prise)
+      pseudoCoups += new GCoups(etats(x.cO), x.cO, x.entier, etats(x.entier), Prise)
       x
     }
   }

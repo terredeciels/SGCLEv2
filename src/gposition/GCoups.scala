@@ -3,6 +3,7 @@ package gposition
 import scalacode.TModele
 import gposition.TypeCoups._
 
+
 class GCoups(var piece: Int, var caseO: Int, var caseX: Int, var pieceprise: Int,
              var typedecoups: TypeCoups, var piecePromotion: Int) extends TModele {
 
