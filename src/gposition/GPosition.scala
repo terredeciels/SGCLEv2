@@ -16,10 +16,8 @@ class GPosition extends TModele {
   var caseEP = 0
   var traits = 0
   var etats = new Array[Int](NB_CELLULES)
- // etats = new Array[Int](NB_CELLULES)
 
   final def init(fen: String) {
-   // this.fen = fen
     cp_position = new CPosition
     cp_position.init(fen)
     for (caseO <- 0 to NB_CELLULES - 1) etats(caseO) = OUT
@@ -45,7 +43,6 @@ class GPosition extends TModele {
     val result = new ArrayBuffer[String]
     for (c <- pseudocoups) result += c.getString
     result.sorted
-   // result
   }
 
   def copie = {
@@ -69,16 +66,8 @@ class GPosition extends TModele {
     val lcp_coups = cp_position.toStringListCPCoups
     var diff = new ArrayBuffer[String]
    diff = lg_coups --= lcp_coups
-//    if (lg_coups.size <= lcp_coups.size)
-//     // diff = getDiff(lg_coups, lcp_coups)
-//    lcp_coups --= lg_coups
-//     else
-//      //diff = getDiff(lcp_coups, lg_coups)
-//    lg_coups --= lcp_coups
     diff
   }
-//  def getDiff(L1: ArrayBuffer[String], L2: ArrayBuffer[String]) = {
-//    L2 --= L1
-//  }
+
 
 }

@@ -90,7 +90,6 @@ class Generateur(val position: GPosition, val couleur: Int) extends TModele {
       x
     }
   }
-  // def retirerLesCoupsMettantEnEchec = pCoups --= fSuprimerEchecs(pCoups)
   def pieceAdverse(c: CASE) = existe(c) && etats(c) * couleur < 0
   def fPion(c: CASE, couleur: COULEUR) = typeDePiece(c) == PION && couleurPiece(c) == couleur
   def fPseudoCoups(position: POSITION, couleur: COULEUR): LISTEDECOUPS = new Generateur(position, couleur).fPseudoCoups
